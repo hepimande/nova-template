@@ -1,0 +1,1317 @@
+/* ========================================
+   MOTHER TEMPLATE
+   Design System
+======================================== */
+
+/* ========================================
+   FOUNDATION
+======================================== */
+:root {
+
+    /* -------------------------
+       Colors
+    ------------------------- */
+
+    --black     : #111111;
+    --gray-900  : #222222;
+    --gray-700  : #444444;
+    --gray-500  : #777777;
+    --gray-300  : #BBBBBB;
+    --gray-200  : #DDDDDD;
+    --gray-100  : #F3F3F3;
+    --white     : #FFFFFF;
+
+
+    /* Semantic Colors */
+
+    --color-text            : var(--black);
+    --color-text-muted      : var(--gray-500);
+
+    --color-background      : var(--white);
+    --color-surface         : var(--gray-100);
+
+    --color-border          : var(--gray-200);
+
+    --color-primary         : var(--black);
+    --color-primary-hover   : var(--gray-700);
+
+
+    /* -------------------------
+       Typography
+    ------------------------- */
+
+    --font-sans:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    --font-serif:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+
+    --text-xs   : 0.75rem;
+    --text-sm   : 0.875rem;
+    --text-base : 1rem;
+    --text-lg   : 1.125rem;
+    --text-xl   : 1.5rem;
+    --text-2xl  : 2rem;
+    --text-3xl  : 3rem;
+    --text-4xl  : 4.5rem;
+
+
+    /* -------------------------
+       Spacing
+    ------------------------- */
+
+    --space-1   : 4px;
+    --space-2   : 8px;
+    --space-3   : 12px;
+    --space-4   : 16px;
+    --space-5   : 24px;
+    --space-6   : 32px;
+    --space-7   : 48px;
+    --space-8   : 64px;
+    --space-9   : 96px;
+    --space-10  : 128px;
+
+
+    /* -------------------------
+       Layout
+    ------------------------- */
+
+    --container : 1200px;
+    --gutter    : 24px;
+
+
+    /* -------------------------
+       Radius
+    ------------------------- */
+
+    --radius-sm     : 6px;
+    --radius-md     : 12px;
+    --radius-lg     : 20px;
+    --radius-pill   : 999px;
+
+
+    /* -------------------------
+       Border
+    ------------------------- */
+
+    --border-width: 1px;
+
+
+    /* -------------------------
+       Shadow
+    ------------------------- */
+
+    --shadow-sm:
+        0 2px 8px rgba(0, 0, 0, 0.05);
+
+    --shadow-md:
+        0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+
+/* ========================================
+   Reset
+======================================== */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+
+    font-family: var(--font-sans);
+    font-size: var(--text-base);
+    line-height: 1.6;
+
+    color: var(--color-text);
+    background: var(--color-background);
+
+    -webkit-font-smoothing: antialiased;
+}
+
+img,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+
+/* ========================================
+   LAYOUT
+======================================== */
+
+
+/* ----------------------------------------
+   Container
+---------------------------------------- */
+
+.container {
+    width: min(
+        calc(100% - (var(--gutter) * 2)),
+        var(--container)
+    );
+
+    margin-inline: auto;
+}
+
+
+/* ----------------------------------------
+   Section
+---------------------------------------- */
+
+.section {
+    padding-block: var(--space-9);
+}
+
+.section-sm {
+    padding-block: var(--space-8);
+}
+
+.section-lg {
+    padding-block: var(--space-10);
+}
+
+
+.section-gray {
+    background: var(--color-surface);
+}
+
+.section-heading {
+    max-width: 680px;
+    margin-bottom: var(--space-7);
+}
+
+.section-heading h2 {
+    margin-bottom: var(--space-3);
+}
+
+.section-heading p {
+    color: var(--color-text-muted);
+}
+
+.section-intro {
+    background-color: var(--black);
+}
+
+.section-intro h1 {
+    color: var(--gray-100);
+}
+
+.section-intro p {
+    color: var(--gray-300);
+}
+
+.eyebrow {
+    display: block;
+
+    margin-bottom: var(--space-3);
+
+    font-size: var(--text-xs);
+    font-weight: 700;
+
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+
+    color: var(--color-text-muted);
+}
+
+.lead {
+    margin-top: var(--space-5);
+
+    font-size: var(--text-lg);
+}
+
+
+
+
+/* ----------------------------------------
+   Stack
+   Vertical spacing between elements
+---------------------------------------- */
+
+.stack {
+    display: flex;
+    flex-direction: column;
+}
+
+.stack-sm {
+    gap: var(--space-3);
+}
+
+.stack-md {
+    gap: var(--space-5);
+}
+
+.stack-lg {
+    gap: var(--space-7);
+}
+
+
+/* ----------------------------------------
+   Cluster
+   Horizontal group of elements
+---------------------------------------- */
+
+.cluster {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    gap: var(--space-3);
+}
+
+
+/* ----------------------------------------
+   Grid
+---------------------------------------- */
+
+.grid {
+    display: grid;
+    gap: var(--space-5);
+}
+
+.grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-4 {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+
+/* ----------------------------------------
+   Split
+   Two-column layout
+---------------------------------------- */
+
+.split {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    align-items: center;
+
+    gap: var(--space-8);
+}
+
+
+/* ----------------------------------------
+   Content Width
+---------------------------------------- */
+
+.content-sm {
+    max-width: 560px;
+}
+
+.content-md {
+    max-width: 720px;
+}
+
+.content-lg {
+    max-width: 900px;
+}
+
+
+/* ----------------------------------------
+   Alignment
+---------------------------------------- */
+
+.text-center {
+    text-align: center;
+}
+
+.mx-auto {
+    margin-inline: auto;
+}
+
+
+/* ----------------------------------------
+   CTA
+---------------------------------------- */
+
+.cta p {
+    margin-bottom: var(--space-4);
+}
+
+
+
+/* ========================================
+   COMPONENTS
+======================================== */
+
+
+/* ----------------------------------------
+   Buttons
+---------------------------------------- */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 44px;
+    padding: 0 20px;
+
+    border: var(--border-width) solid transparent;
+    border-radius: var(--radius-sm);
+
+    font-size: var(--text-sm);
+    font-weight: 600;
+    line-height: 1;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+}
+
+
+/* Primary */
+
+.btn-primary {
+    color: var(--white);
+    background: var(--color-primary);
+}
+
+.btn-primary:hover {
+    background: var(--color-primary-hover);
+}
+
+
+/* Secondary */
+
+.btn-secondary {
+    color: var(--color-text);
+    background: var(--color-surface);
+}
+
+.btn-secondary:hover {
+    background: var(--gray-200);
+}
+
+
+/* Outline */
+
+.btn-outline {
+    color: var(--color-text);
+    background: transparent;
+    border-color: var(--color-border);
+}
+
+.btn-outline:hover {
+    background: var(--color-surface);
+}
+
+
+/* Text */
+
+.btn-text {
+    min-height: auto;
+    padding: 0;
+
+    color: var(--color-text);
+    background: transparent;
+}
+
+.btn-text:hover {
+    color: var(--color-text-muted);
+    transform: none;
+}
+
+
+/* ----------------------------------------
+   Badges
+---------------------------------------- */
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+
+    min-height: 28px;
+    padding: 0 10px;
+
+    border: var(--border-width) solid var(--color-border);
+    border-radius: var(--radius-pill);
+
+    font-size: var(--text-xs);
+    font-weight: 600;
+
+    color: var(--color-text);
+    background: var(--white);
+}
+
+.badge-dark {
+    color: var(--white);
+    background: var(--black);
+    border-color: var(--black);
+}
+
+
+/* ----------------------------------------
+   Cards
+---------------------------------------- */
+
+.card-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: var(--space-5);
+}
+
+.card {
+    padding: var(--space-6);
+
+    border: var(--border-width) solid var(--color-border);
+    border-radius: var(--radius-md);
+
+    background: var(--color-background);
+}
+
+.card-number {
+    display: block;
+
+    margin-bottom: var(--space-5);
+
+    font-size: var(--text-xs);
+    font-weight: 700;
+
+    color: var(--color-text-muted);
+}
+
+.card h3 {
+    margin-bottom: var(--space-3);
+}
+
+.card p {
+    margin-bottom: var(--space-5);
+
+    color: var(--color-text-muted);
+}
+
+.card a {
+    font-size: var(--text-sm);
+    font-weight: 600;
+}
+
+
+/* ----------------------------------------
+   Alerts
+---------------------------------------- */
+
+.alert-group {
+    display: grid;
+    gap: var(--space-3);
+}
+
+.alert {
+    padding: var(--space-4) var(--space-5);
+
+    border: var(--border-width) solid var(--color-border);
+    border-radius: var(--radius-sm);
+
+    font-size: var(--text-sm);
+
+    background: var(--color-surface);
+}
+
+.alert strong {
+    margin-right: var(--space-2);
+}
+
+
+/* Semantic variations */
+
+.alert-success {
+    border-color: var(--gray-300);
+}
+
+.alert-warning {
+    border-color: var(--gray-300);
+}
+
+.alert-danger {
+    border-color: var(--black);
+}
+
+
+/* ----------------------------------------
+   Forms
+---------------------------------------- */
+
+.form-group {
+    display: grid;
+    gap: var(--space-2);
+
+    margin-bottom: var(--space-5);
+}
+
+.form-group label {
+    font-size: var(--text-sm);
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+
+    padding: 12px 14px;
+
+    border: var(--border-width) solid var(--color-border);
+    border-radius: var(--radius-sm);
+
+    color: var(--color-text);
+    background: var(--color-background);
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: var(--gray-500);
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: var(--black);
+
+    box-shadow: 0 0 0 3px var(--gray-100);
+}
+
+.form-group textarea {
+    min-height: 140px;
+
+    resize: vertical;
+}
+
+
+/* ----------------------------------------
+   Button Group
+---------------------------------------- */
+
+.button-group,
+.badge-group {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    gap: var(--space-3);
+}
+
+/* ----------------------------------------
+   Component Group
+---------------------------------------- */
+
+.component-group {
+    margin-top: var(--space-8);
+}
+
+.component-group:first-child {
+    margin-top: 0;
+}
+
+.component-group > h3 {
+    margin-bottom: var(--space-4);
+
+    font-size: var(--text-sm);
+    font-weight: 700;
+}
+
+
+
+
+/* ========================================
+   NAVIGATION
+======================================== */
+
+
+/* ----------------------------------------
+   Header
+---------------------------------------- */
+
+.site-header {
+    position: relative;
+
+    border-bottom: var(--border-width) solid var(--color-border);
+
+    background: var(--color-background);
+}
+
+
+/* ----------------------------------------
+   Navbar
+---------------------------------------- */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    min-height: 72px;
+}
+
+
+/* ----------------------------------------
+   Logo
+---------------------------------------- */
+
+.logo {
+    display: inline-flex;
+    align-items: center;
+
+    font-size: var(--text-base);
+    font-weight: 700;
+
+    letter-spacing: -0.02em;
+}
+
+
+/* ----------------------------------------
+   Navigation Links
+---------------------------------------- */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+
+    gap: var(--space-5);
+}
+
+.nav-links a {
+    position: relative;
+
+    padding-block: 8px;
+
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: var(--color-text);
+}
+
+
+/* Active / current link */
+
+.nav-links a[aria-current="page"] {
+    color: var(--color-text);
+}
+
+
+/* ----------------------------------------
+   Mobile Menu Button
+---------------------------------------- */
+
+.menu-toggle {
+    display: none;
+
+    width: 44px;
+    height: 44px;
+
+    padding: 0;
+
+    border: var(--border-width) solid var(--color-border);
+    border-radius: var(--radius-sm);
+
+    background: var(--color-background);
+
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+
+    gap: var(--space-1);
+}
+
+.menu-toggle span {
+    display: block;
+
+    width: 18px;
+    height: 1px;
+
+    background: var(--color-text);
+
+    transition:
+        transform 0.2s ease,
+        opacity 0.2s ease;
+}
+
+
+
+
+/* ========================================
+   INTERACTION
+======================================== */
+
+
+/* ----------------------------------------
+   Accordion
+---------------------------------------- */
+
+.accordion {
+
+    border-top: var(--border-width) solid var(--color-border);
+}
+
+
+/* ----------------------------------------
+   Item
+---------------------------------------- */
+
+.accordion-item {
+    border-bottom: var(--border-width) solid var(--color-border);
+}
+
+
+/* ----------------------------------------
+   Trigger
+---------------------------------------- */
+
+.accordion-trigger {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+
+    padding: 20px 0;
+
+    border: 0;
+
+    color: var(--color-text);
+    background: transparent;
+
+    font: inherit;
+    font-weight: 600;
+
+    text-align: left;
+
+    cursor: pointer;
+}
+
+
+/* ----------------------------------------
+   Icon
+---------------------------------------- */
+
+.accordion-icon {
+    flex: 0 0 auto;
+
+    font-size: 20px;
+    font-weight: 400;
+
+    line-height: 1;
+
+    transition:
+        transform 0.2s ease;
+}
+
+
+/* ----------------------------------------
+   Content
+---------------------------------------- */
+
+.accordion-content {
+    display: grid;
+
+    grid-template-rows: 0fr;
+
+    transition:
+        grid-template-rows 0.25s ease;
+}
+
+.accordion-content p {
+    overflow: hidden;
+
+    margin: 0;
+
+    color: var(--color-text-muted);
+}
+
+
+/* ----------------------------------------
+   Open State
+---------------------------------------- */
+
+.accordion-item.is-open .accordion-content {
+    grid-template-rows: 1fr;
+}
+
+.accordion-item.is-open
+.accordion-icon {
+    transform: rotate(45deg);
+}
+
+.accordion-item.is-open
+.accordion-content p {
+    padding-bottom: 20px;
+}
+
+
+
+/* ----------------------------------------
+   Modal
+---------------------------------------- */
+
+.modal {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 100;
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: var(--space-5);
+}
+
+.modal.is-open {
+    display: flex;
+}
+
+
+/* ----------------------------------------
+   Backdrop
+---------------------------------------- */
+
+.modal-backdrop {
+    position: absolute;
+
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.45);
+}
+
+
+/* ----------------------------------------
+   Dialog
+---------------------------------------- */
+
+.modal-dialog {
+    position: relative;
+
+    z-index: 1;
+
+    width: min(
+        100%,
+        560px
+    );
+
+    border: var(--border-width) solid var(--color-border);
+    border-radius: var(--radius-md);
+
+    background: var(--color-background);
+
+    box-shadow: var(--shadow-md);
+}
+
+
+/* ----------------------------------------
+   Modal Header
+---------------------------------------- */
+
+.modal-header {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: var(--space-5);
+
+    padding: var(--space-6);
+
+    border-bottom: var(--border-width) solid var(--color-border);
+}
+
+.modal-header h2 {
+    margin: 0;
+
+    font-size: var(--text-lg);
+}
+
+
+/* ----------------------------------------
+   Modal Close Button
+---------------------------------------- */
+
+.modal-close {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 36px;
+    height: 36px;
+
+    padding: 0;
+
+    border: 0;
+
+    border-radius: var(--radius-sm);
+
+    color: var(--color-text);
+
+    background: transparent;
+
+    font-size: 24px;
+    font-weight: 300;
+
+    line-height: 1;
+
+    cursor: pointer;
+}
+
+.modal-close:hover {
+    background: var(--color-surface);
+}
+
+
+/* ----------------------------------------
+   Modal Body
+---------------------------------------- */
+
+.modal-body {
+    padding: var(--space-6);
+}
+
+.modal-body p {
+    margin: 0;
+
+    color: var(--color-text-muted);
+}
+
+
+/* ----------------------------------------
+   Modal Footer
+---------------------------------------- */
+
+.modal-footer {
+    display: flex;
+
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: var(--space-3);
+
+    padding: var(--space-6);
+
+    border-top: var(--border-width) solid var(--color-border);
+}
+
+
+/* ----------------------------------------
+   Modal Body Lock
+---------------------------------------- */
+
+body.modal-open {
+    overflow: hidden;
+}
+
+
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
+
+/* ----------------------------------------
+   Footer
+---------------------------------------- */
+
+.site-footer {
+    padding-block: var(--space-8) var(--space-5);
+
+    border-top: var(--border-width) solid var(--color-border);
+
+    background: var(--color-background);
+}
+
+
+/* ----------------------------------------
+   Footer Main
+---------------------------------------- */
+
+.footer-main {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: var(--space-8);
+
+    padding-bottom: var(--space-8);
+}
+
+
+/* ----------------------------------------
+   Footer Brand
+---------------------------------------- */
+
+.footer-brand {
+    max-width: 320px;
+}
+
+.footer-brand .logo {
+    margin-bottom: var(--space-3);
+}
+
+.footer-brand p {
+    margin: 0;
+
+    color: var(--color-text-muted);
+
+    font-size: var(--text-sm);
+}
+
+
+/* ----------------------------------------
+   Footer Links
+---------------------------------------- */
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: var(--space-5);
+}
+
+.footer-links a {
+    font-size: var(--text-sm);
+
+    color: var(--color-text-muted);
+
+    transition:
+        color 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: var(--color-text);
+}
+
+
+/* ----------------------------------------
+   Footer Bottom
+---------------------------------------- */
+
+.footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: var(--space-5);
+
+    padding-top: var(--space-5);
+
+    border-top: var(--border-width) solid var(--color-border);
+
+    color: var(--color-text-muted);
+
+    font-size: var(--text-xs);
+}
+
+
+
+/* ========================================
+   Nova — Hero
+======================================== */
+
+.hero {
+    padding-block: 8rem 10rem;
+}
+
+.hero .badge {
+    width: fit-content;
+}
+
+.hero h1 {
+    max-width: 900px;
+    font-size: clamp(3rem, 6vw, 5rem);
+    line-height: 1;
+    letter-spacing: -0.04em;
+}
+
+.hero .lead {
+    max-width: 720px;
+    font-size: 1.125rem;
+}
+
+
+/* ========================================
+   Nova — About
+======================================== */
+
+.about-title {
+    max-width: 420px;
+    font-size: clamp(2rem, 4vw, 3.25rem);
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+}
+
+
+/* ========================================
+   Nova — Project
+======================================== */
+
+.project-card {
+    transition:
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.project-card:hover {
+    border-color: var(--gray-500);
+    transform: translateY(-2px);
+}
+
+.project-card h3 {
+    margin-top: var(--space-3);
+}
+
+.project-image {
+    overflow: hidden;
+
+    aspect-ratio: 16 / 10;
+
+    margin-bottom: var(--space-5);
+
+    border-radius: var(--radius-sm);
+
+    background: var(--color-surface);
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* ========================================
+   Nova — Service
+======================================== */
+.service-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 48px;
+    height: 48px;
+
+    margin-bottom: var(--space-5);
+
+    border: var(--border-width) solid var(--color-border);
+    border-radius: var(--radius-sm);
+
+    background: var(--color-surface);
+}
+
+.service-icon img,
+.service-icon svg {
+    width: 24px;
+    height: 24px;
+}
+
+/* ========================================
+   Nova — Site Footer
+======================================== */
+.site-footer {
+    border-top: none;
+}
+
+/* ========================================
+   Nova — Recommended Resource
+======================================== */
+
+.resource-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-6);
+
+    border-radius: var(--radius-md);
+
+    padding: var(--space-7);
+
+    border: var(--border-width) solid var(--color-border);
+}
+
+.resource-card h2 {
+    max-width: 600px;
+}
+
+.resource-card p {
+    max-width: 560px;
+}

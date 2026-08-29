@@ -1,0 +1,176 @@
+/* ========================================
+RESPONSIVE
+======================================== */
+
+@media (max-width: 768px) {
+    
+    /* ----------------------------------------
+    Layout Responsive
+    ---------------------------------------- */
+
+    .grid-2,
+    .grid-3,
+    .grid-4,
+    .split {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* ----------------------------------------
+    Component Responsive
+    ---------------------------------------- */
+
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .button-group {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .button-group .btn {
+        width: 100%;
+    }
+
+
+    /* ----------------------------------------
+    Navigation Responsive
+    ---------------------------------------- */
+
+    .navbar {
+        min-height: 64px;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+
+        position: absolute;
+
+        top: 100%;
+        left: 0;
+        right: 0;
+
+        z-index: 10;
+
+        flex-direction: column;
+        align-items: stretch;
+
+        gap: 0;
+
+        padding: var(--space-3);
+
+        border-bottom: var(--border-width) solid var(--color-border);
+
+        background: var(--color-background);
+    }
+
+    .nav-links.is-open {
+        display: flex;
+    }
+
+    .nav-links a {
+        padding: 14px 12px;
+
+        border-radius: var(--radius-sm);
+    }
+
+    .nav-links a:hover {
+        background: var(--color-surface);
+    }
+
+
+    /* Hamburger → X */
+
+    .menu-toggle.is-open span:nth-child(1) {
+        transform: translateY(5px) rotate(45deg);
+    }
+
+    .menu-toggle.is-open span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.is-open span:nth-child(3) {
+        transform: translateY(-5px) rotate(-45deg);
+    }
+
+
+    /* ----------------------------------------
+    Interaction Responsive
+    ---------------------------------------- */
+
+    .modal {
+        align-items: flex-end;
+
+        padding: 0;
+    }
+
+    .modal-dialog {
+        width: 100%;
+
+        border-radius:
+            var(--radius-md)
+            var(--radius-md)
+            0
+            0;
+    }
+
+    .modal-footer {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .modal-footer .btn {
+        width: 100%;
+    }
+
+
+    /* ----------------------------------------
+    Footer Responsive
+    ---------------------------------------- */
+
+    .footer-main {
+        flex-direction: column;
+
+        padding-bottom: var(--space-6);
+    }
+
+    .footer-links {
+        flex-direction: column;
+
+        gap: var(--space-3);
+    }
+
+    .footer-bottom {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: var(--space-2);
+    }
+
+
+    /* ----------------------------------------
+    Nova — Recommended Resource
+    ---------------------------------------- */
+    .resource-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-5);
+        padding: var(--space-5);
+    }
+
+    .resource-card h2,
+    .resource-card p {
+        max-width: none;
+    }
+
+    .resource-card .btn {
+        width: 100%;
+    }
+
+}
