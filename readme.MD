@@ -188,7 +188,7 @@ These links help support the continued development and maintenance of free templ
 
 ## Credits
 
-Built with [Mother Template](YOUR_AFFILIATE_LINK_HERE):
+Built with [Mother Template](https://github.com/hepimande/mother-template):
 
 - HTML
 - CSS
