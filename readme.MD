@@ -188,9 +188,7 @@ These links help support the continued development and maintenance of free templ
 
 ## Credits
 
-Designed and developed by HepiMande.
-
-Built with:
+Built with [Mother Template](YOUR_AFFILIATE_LINK_HERE):
 
 - HTML
 - CSS
