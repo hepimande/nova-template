@@ -171,14 +171,6 @@ If Nova helped you build your website, consider supporting the project.
 **[Buy me a coffee](https://buymeacoffee.com/uardj7ltb)**
 
 
-### Affiliate Disclosure
-
-Some links included in this template or documentation may be affiliate links.
-
-If you purchase something through an affiliate link, HepiMande may earn a commission at no additional cost to you.
-
-These links help support the continued development and maintenance of free templates.
-
 ## Credits
 
 Built with [Mother Template](https://github.com/hepimande/mother-template):
