@@ -164,19 +164,12 @@ You may not sell, redistribute, or publish the template source files as a standa
 
 See the `LICENSE` file for the complete license terms.
 
-## Recommended Resources
+## Enjoying Nova?
 
-Need a place to host your website?
+If Nova helped you build your website, consider supporting the project. 
 
-We recommend checking out this hosting service:
+**[Buy me a coffee](https://buymeacoffee.com/uardj7ltb)**
 
-**[Recommended Hosting Service](YOUR_AFFILIATE_LINK_HERE)**
-
-Looking for a domain?
-
-**[Recommended Domain Provider](YOUR_AFFILIATE_LINK_HERE)**
-
-> Replace the placeholder links above with your actual affiliate links.
 
 ### Affiliate Disclosure
 
